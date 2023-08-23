@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Steam Game Shop by Thư</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- ipx screen -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body>
+    <header>
+      <!-- logo + banner + login -->
+      <div class="content">
+        <div class="logo">
+          <span id="logo_holder">
+            <a href="https://store.steampowered.com/?snr=1_4_4__global-header">
+              <img
+                src="https://store.cloudflare.steamstatic.com/public/shared/images/header/logo_steam.svg?t=962016"
+                width="176"
+                height="44"
+              />
+            </a>
+          </span>
+        </div>
+        <div class="supernav_container">
+          <a
+            class="menuitem"
+            href="https://store.steampowered.com/?snr=1_4_4__global-header"
+            >STORE
+          </a>
+          &nbsp;|&nbsp;
+          <a class="menuitem" href="https://steamcommunity.com/">COMMUNITY </a>
+          &nbsp;|&nbsp;
+          <a
+            class="menuitem"
+            href="https://store.steampowered.com/about/?snr=1_4_4__global-header"
+            >ABOUT
+          </a>
+          &nbsp;|&nbsp;
+          <a class="menuitem" href="https://help.steampowered.com/en/"
+            >SUPPORT
+          </a>
+        </div>
+        <div id="global_actions">
+          <div id="global_action_menu">
+            <a
+              class="global_action_link"
+              href="https://store.steampowered.com/login/?redir=&redir_ssl=1&snr=1_4_4__global-header"
+              >Login</a
+            >
+            &nbsp;|&nbsp;
+            <a
+              href="https://store.steampowered.com/login/?redir=&redir_ssl=1&snr=1_4_4__global-header"
+              >Language</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+    <!--  -->
+    <main>
+      <!-- category menu on left -->
+      <div class="home_page_content home_gutter_outside">
+        <div class="home_page_gutter">
+          <!--  -->
+          <div class="home_page_gutter_block">
+            <!-- search input-->
+            <div id="store_search">
+              <div class="searchbox">
+                <input
+                  id="searchInput"
+                  name="term"
+                  type="text"
+                  class="default"
+                  placeholder="search by name"
+                  size="22"
+                  autocomplete="off"
+                  maxlength="64"
+                  fdprocessedid="u666bk"
+                />
+                <a href="#" id="store_search_link" class="searchIcon"
+                  ><img
+                    src="https://store.cloudflare.steamstatic.com/public/images/blank.gif"
+                /></a>
+              </div>
+            </div>
+            <br />
+            <!-- category list -->
+            <div class="gutter_header pad"><strong>Browse by Tag</strong></div>
+            <div class="gutter_items" id="list_of_tag"></div>
+            <br />
+            <div class="gutter_header pad" id="">
+              <strong>Browse by Genre</strong>
+            </div>
+            <div class="gutter_items" id="list_of_genre"></div>
+            <!-- <div><button id="searchButton">Get Game</button></div> -->
+          </div>
+        </div>
+      </div>
+      <!-- game menu, gallery on right, 
+        show game detail, game by tag/genre, search by name-->
+      <div class="showing_game" id="display_gallery">
+        <div
+          class="game_wrapper"
+          id="game_wrapper"
+          onclick="renderDetail('${game.appid}')"
+          <!--
+          function
+          render
+          detail
+          of
+          game
+          --
+        >
+          >
+        </div>
+      </div>
+    </main>
+    <!-- Footer -->
+    <div class="footer_content">
+      <div>
+        <img
+          src="https://store.cloudflare.steamstatic.com/public/images/v6/logo_steam_footer.png"
+          alt="Valve Software"
+          border="0"
+        />
+      </div>
+      <div>
+        <div>
+          &copy;2023 Valve Corporation. All rights reserved. All trademarks are
+          property of their respective owners in the US and other countries.
+        </div>
+        <!-- ipX screen -->
+        <div class="responsive_optin_link">
+          <div
+            class="btn_medium btnv6_grey_black"
+            onclick="Responsive_RequestMobileView()"
+          >
+            <!-- function? -->
+            <span>View mobile website</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="scripts.js"></script>
+  </body>
+</html>
