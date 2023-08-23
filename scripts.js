@@ -220,7 +220,6 @@ renderListOfGenres(); //DONE
 async function getTagName() {
   let tagName = await getDataOfTags(); //list of tags
   tagName = tagName.data.name;
-  // console.log(tagName);
 }
 
 // get data for games by tag
